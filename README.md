@@ -13,16 +13,15 @@ Este projeto é um CRUD desenvolvido em **Angular** utilizando **NG-ZORRO** para
 **Navegação com Router e Breadcrumb**  
 
 ## Instalação
-- E necessário ter 
+
+- É necessário ter ->
  **Angular CLI: 19.1.7** //
  **Node: 18.20.6** //
  **Package Manager: npm 10.8.2** //
 
 ### **Clone o repositório**
-
-git clone https://github.com/GivaJr/XBRI.git 
-cd XBRI
-cd xbri-desafio-frontend
+Faça o clone do projeto (git clone https://github.com/GivaJr/XBRI.git) em seguida navegue nas pastas até chegar na pasta xbri-desafio-frontend
+(cd XBRI -> cd xbri-desafio-frontend)
 
 ### Instale as dependências
 
