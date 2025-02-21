@@ -15,9 +15,12 @@ Este projeto é um CRUD desenvolvido em **Angular** utilizando **NG-ZORRO** para
 ## Instalação
 
 - É necessário ter ->
- **Angular CLI: 19.1.7** //
- **Node: 18.20.6** //
- **Package Manager: npm 10.8.2** //
+  
+ **Angular CLI: 19.1.7** 
+ 
+ **Node: 18.20.6** 
+ 
+ **Package Manager: npm 10.8.2** 
 
 ### **Clone o repositório**
 Faça o clone do projeto (git clone https://github.com/GivaJr/XBRI.git) em seguida navegue nas pastas até chegar na pasta xbri-desafio-frontend
@@ -30,6 +33,7 @@ npm install
 ### Rode o projeto
 
 npm run start
+
 Acesse http://localhost:4200 no navegador.
 
 Se precisar de mais algo, me avise!
