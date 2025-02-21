@@ -9,8 +9,7 @@ Este projeto é um CRUD desenvolvido em **Angular** utilizando **NG-ZORRO** para
 **CRUD de Itens** (Criar, Listar, Editar, Excluir)  
 **Formulário Responsivo** com **NG-ZORRO**  
 **Persistência de Dados** no **LocalStorage**  
-**Máscara de Moeda Brasileira (R$)** usando `ng2-currency-mask`  
-**Confirmação ao Excluir** com `NzModalService`  
+**Máscara de Moeda Brasileira (R$)** usando `ng2-currency-mask`    
 **Navegação com Router e Breadcrumb**  
 
 ---
@@ -19,7 +18,7 @@ Este projeto é um CRUD desenvolvido em **Angular** utilizando **NG-ZORRO** para
 
 ### **Clone o repositório**
 
-git clone https://github.com/seu-usuario/XBRI.git
+git clone https://github.com/GivaJr/XBRI.git
 cd XBRI
 
 ## Instale as dependências
