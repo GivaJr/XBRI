@@ -20,14 +20,13 @@ Este projeto é um CRUD desenvolvido em **Angular** utilizando **NG-ZORRO** para
 
 git clone https://github.com/GivaJr/XBRI.git
 cd XBRI
+cd xbri-desafio-frontend
 
-## Instale as dependências
-
+### Instale as dependências
 npm install
 
-## Rode o projeto
-
-ng serve
+### Rode o projeto
+npm run start
 Acesse http://localhost:4200 no navegador.
 
 Se precisar de mais algo, me avise!
