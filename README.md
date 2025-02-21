@@ -13,6 +13,11 @@ Este projeto é um CRUD desenvolvido em **Angular** utilizando **NG-ZORRO** para
 **Navegação com Router e Breadcrumb**  
 
 ## Instalação
+E necessário ter :
+            Angular CLI: 19.1.7
+            Node: 18.20.6
+            Package Manager: npm 10.8.2
+            OS: win32 x64
 
 ### **Clone o repositório**
 
@@ -28,5 +33,3 @@ npm run start
 Acesse http://localhost:4200 no navegador.
 
 Se precisar de mais algo, me avise!
-
-
