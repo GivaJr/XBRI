@@ -12,8 +12,6 @@ Este projeto é um CRUD desenvolvido em **Angular** utilizando **NG-ZORRO** para
 **Máscara de Moeda Brasileira (R$)** usando `ng2-currency-mask`    
 **Navegação com Router e Breadcrumb**  
 
----
-
 ## Instalação
 
 ### **Clone o repositório**
