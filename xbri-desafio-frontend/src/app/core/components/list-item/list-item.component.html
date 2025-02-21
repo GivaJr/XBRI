@@ -1,0 +1,52 @@
+<nz-breadcrumb>
+  <nz-breadcrumb-item>
+    <a routerLink="/"><nz-icon nzType="home" nzTheme="outline" /> </a>
+  </nz-breadcrumb-item>
+  <nz-breadcrumb-item>
+    Lista de Itens
+  </nz-breadcrumb-item>
+</nz-breadcrumb>
+
+<h3 nz-typography style="padding-top: 15px;">Lista de Itens</h3>
+
+<div class="flex-item">
+  <button nz-button nzType="primary" (click)="navigateForRegister()">Cadastrar Novo Item</button>
+</div>
+
+<nz-table #basicTable [nzData]="listOfData">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Categoria</th>
+      <th>Quantidade</th>
+      <th>Preço</th>
+      <th>Ativo</th>
+      <th nzWidth="15%">Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (data of basicTable.data; track data) {
+      <tr>
+        <td>{{ data.nome }}</td>
+        <td>{{ data.categoria }}</td>
+        <td>{{ data.quantidade }}</td>
+        <td>{{ data.preco | currency:'BRL' }}</td>
+        <td>
+          <nz-tag [nzColor]="data.ativo ? 'green' : 'red'">
+              {{ data.ativo ? 'Sim' : 'Não' }}
+          </nz-tag>
+      </td>
+      <td>
+        <button nz-button nzType="link" nzShape="circle" (click)="editItem(data)">
+          <i nz-icon nzType="edit" nzTheme="outline"></i>
+        </button>
+
+        <!-- Ícone Excluir -->
+        <button nz-button nzType="link" nzShape="circle" nzDanger (click)="confirmDelete(data.id)">
+          <i nz-icon nzType="delete" nzTheme="outline"></i>
+        </button>
+      </td>
+      </tr>
+    }
+  </tbody>
+</nz-table>

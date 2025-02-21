@@ -1,0 +1,66 @@
+<nz-breadcrumb>
+  <nz-breadcrumb-item>
+    <a (click)="backToMain()"><nz-icon nzType="home" nzTheme="outline" /> </a>
+  </nz-breadcrumb-item>
+  <nz-breadcrumb-item>
+    <a (click)="backToMain()">Lista de Itens</a>
+  </nz-breadcrumb-item>
+  <nz-breadcrumb-item>
+    {{itemEditandoId ? 'Editar Produto': 'Cadastro de Produto'}}
+  </nz-breadcrumb-item>
+</nz-breadcrumb>
+
+<h3 nz-typography style="padding: 15px 0px 0px 0px;">{{itemEditandoId ? 'Editar Produto': 'Cadastro de Produto'}}</h3>
+
+<form [formGroup]="productForm" (ngSubmit)="submitForm()">
+  <div nz-row nzGutter="16" class="form-row">
+    <div nz-col nzSpan="8">
+      <label>Nome</label> <label class="required-value">*</label>
+      <input nz-input formControlName="nome" placeholder="Nome do produto" />
+      <div *ngIf="productForm.get('nome')?.invalid && productForm.get('nome')?.touched" class="error">
+        O nome é obrigatório e deve ter pelo menos 3 caracteres.
+      </div>
+    </div>
+
+    <div nz-col nzSpan="8">
+      <label>Categoria</label> <label class="required-value">*</label>
+      <input nz-input formControlName="categoria" placeholder="Categoria" />
+      <div *ngIf="productForm.get('categoria')?.invalid && productForm.get('categoria')?.touched" class="error">
+        A categoria é obrigatória.
+      </div>
+    </div>
+
+    <div nz-col nzSpan="8">
+      <label>Quantidade</label> <label *ngIf="productForm.get('ativo')?.value == true" class="required-value">*</label>
+      <input nz-input type="number" formControlName="quantidade" placeholder="Quantidade" />
+      <div *ngIf="productForm.get('quantidade')?.invalid && productForm.get('quantidade')?.touched" class="error">
+        A quantidade é obrigatória.
+      </div>
+    </div>
+  </div>
+
+  <div nz-row nzGutter="16" class="mt-2 form-row">
+    <div nz-col nzSpan="8">
+      <label>Preço</label> <label  *ngIf="productForm.get('ativo')?.value == true"  class="required-value">*</label>
+      <nz-input-group nzPrefix="R$">
+        <input nz-input formControlName="preco" placeholder="0,00" currencyMask [options]="currencyOptions" />
+      </nz-input-group>
+      <div *ngIf="productForm.get('preco')?.invalid && productForm.get('preco')?.touched" class="error">
+        O preço é obrigatório e deve ser maior que R$ 0,00.
+      </div>
+    </div>
+
+    <div nz-col nzSpan="8">
+      <label>Ativo</label> <label class="required-value">*</label> <br />
+      <nz-switch formControlName="ativo"></nz-switch>
+    </div>
+  </div>
+
+  <div nz-row nzGutter="16" class="buttons-register  form-row">
+    <div style="padding-right: 10px;">
+      <button nz-button nzType="default" (click)="backToMain()" style="margin-right: 8px;">Cancelar</button>
+      <button nz-button nzType="primary" [disabled]="productForm.invalid">{{itemEditandoId ? 'Salvar alterações': 'Salvar'}}</button>
+    </div>
+  </div>
+
+</form>

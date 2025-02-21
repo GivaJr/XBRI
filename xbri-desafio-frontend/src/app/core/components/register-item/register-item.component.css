@@ -1,0 +1,24 @@
+.buttons-register{
+  display: flex;
+  margin: 8px;
+  text-align: right;
+  flex-direction: row-reverse
+}
+
+.form-row {
+  padding-top: 20px;
+  height: 80px;
+}
+
+
+.required-value{
+  color: red;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  min-height: 16px;
+  display: block;
+  margin-top: 4px;
+}
